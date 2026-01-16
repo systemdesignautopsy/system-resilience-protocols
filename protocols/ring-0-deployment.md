@@ -1,9 +1,5 @@
 # Ring 0 Deployment Safety Protocol
 
-**Type:** Production Gate
-**Context:** Kernel Mode, Root Level, or Sidecar Deployments.
-**Status:** Stable
-
 ## 1. Build Artifact (Static Gates)
 - [ ] **Strict Schema Versioning:** Config file versions must exactly match the binary's expected schema. No "forward compatibility" assumptions.
 - [ ] **No Implicit Defaults:** All input fields must be explicitly defined. Null fallbacks are forbidden.
@@ -24,3 +20,7 @@
 ## 4. Disaster Recovery
 - [ ] **Kill Switch:** Non-cloud mechanism to revert changes (Safe Mode/Last Known Good).
 - [ ] **Key Availability:** BitLocker keys accessible via API for automated recovery scripts.
+
+
+> **Watch the full autopsy:** [The $5.4 Billion Index-Out-Of-Bounds Error (YouTube)](https://www.youtube.com/watch?v=D95UYR7Oo3Y)
+> *This protocol was developed based on the analysis of the CrowdStrike Falcon outage. See the video for the architectural breakdown.*
